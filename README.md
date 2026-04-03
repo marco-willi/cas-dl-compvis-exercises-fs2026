@@ -11,6 +11,12 @@ There are several ways to work on the assignments:
 
 Use Google Colab by clicking on the links below.
 
+### Exercise 00 - PyTorch Recap
+
+Click on the following badge to open the notebook in Google Colab:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/marco-willi/cas-dl-compvis-exercises-fs2026/blob/main/notebooks/00_pytorch/solution.ipynb)
+
 ## Local
 
 ```
