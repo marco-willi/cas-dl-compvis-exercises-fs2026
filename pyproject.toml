@@ -1,0 +1,158 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "dl-cv-exercises"
+description = "Deep Learning for Computer Vision Lecture Tools"
+authors = ["Marco Willi <marco.willi@fhnw.ch>"]
+readme = "README.md"
+packages = [{ include = "dl_cv_lectures", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+# --------- data & analysis -------- #
+pandas = "*"
+numpy = "*"
+
+# --------- visualize -------- #
+matplotlib = "*"
+seaborn = "*"
+plotly = "*"
+altair = "*"
+
+# --------- data & image processing --------- #
+pillow = "*"
+opencv-python-headless = "*"
+
+# --------- machine learning --------- #
+mlxtend = "*"
+scikit-learn = "*"
+scikit-image = "*"
+torch = "*"
+torchvision = "*"
+torchmetrics = "*"
+torchshow = "*"
+torchviz = "*"
+torchinfo = "*"
+visualtorch = "*"
+lightning = "*"
+transformers = "*"
+kornia = "*"
+
+# --------- Hugging Face Ecosystem --------- #
+datasets = "*"
+diffusers = "*"
+accelerate = "*"
+bitsandbytes = "*"
+sentencepiece = "*"
+huggingface_hub = "*"
+timm = "*"
+
+# --- generative ai --- #
+openai = "^2.1.0"
+replicate = "^1.0.7"
+google-generativeai = "*"
+
+# --------- Experiment Tracking --------- #
+tensorboard = "*"
+wandb = "*"
+
+# --------- jupyter --------- #
+jupyter = "*"
+jupyterlab = "*"
+jupyter-cache = "*"
+ipykernel = "^6.30.1"
+ipywidgets = ">=8"
+xeus-python = "*"
+python-gitlab = "*"
+
+# --------- HTTP & APIs --------- #
+requests = "*"
+
+# --------- Utilities --------- #
+tqdm = "*"
+python-dotenv = "*"
+pyrootutils = "*"
+gdown = "*"
+tabulate = "*"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+ruff = "*"
+argcomplete = "*"
+pytest = "*"
+mypy = "*"
+pre-commit = "*"
+rich = "*"
+
+[tool.poetry.group.extra]
+optional = true
+
+[tool.poetry.group.extra.dependencies]
+optuna = "*"
+captum = "*"
+pyppeteer = "*"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+exclude = [
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".tox",
+    ".venv",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "__pycache__",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort (import sorting)
+    "C",   # flake8-comprehensions
+    "B",   # flake8-bugbear
+    "UP",  # pyupgrade
+    "RUF", # ruff-specific rules
+    "SIM", # flake8-simplify
+    "PTH", # flake8-use-pathlib
+]
+ignore = [
+    "E501", # line too long, handled by formatter
+    "B008", # do not perform function calls in argument defaults
+    "C901", # too complex
+    "E203", # whitespace before ':' (conflicts with formatter)
+]
+
+[tool.ruff.lint.per-file-ignores]
+"notebooks/00_env_check/env_check.ipynb" = ["F401", "I", "E402"]
+"notebooks/**/*.ipynb" = ["F401", "E402", "W291", "B018"]
+"notebooks/template.ipynb" = ["F401", "E402"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint.isort]
+known-first-party = ["dl_cv_lectures"]
+force-single-line = false
+force-sort-within-sections = false
+split-on-trailing-comma = true
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
