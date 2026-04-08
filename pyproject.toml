@@ -138,6 +138,7 @@ ignore = [
 "notebooks/00_env_check/env_check.ipynb" = ["F401", "I", "E402"]
 "notebooks/**/*.ipynb" = ["F401", "E402", "W291", "B018"]
 "notebooks/template.ipynb" = ["F401", "E402"]
+"exercises/**/*.ipynb" = ["F401", "E402", "W291", "B018", "F821"]
 
 [tool.ruff.format]
 quote-style = "double"
