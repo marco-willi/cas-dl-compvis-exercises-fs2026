@@ -1,0 +1,2 @@
+# Colab-extras only (packages not pre-installed on Colab)
+torchinfo

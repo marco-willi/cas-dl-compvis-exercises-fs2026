@@ -17,6 +17,24 @@ Click on the following badge to open the notebook in Google Colab:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/marco-willi/cas-dl-compvis-exercises-fs2026/blob/main/exercises/00_pytorch/exercise.ipynb)
 
+### Exercise 01 - Images as Data
+
+Click on the following badge to open the notebook in Google Colab:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/marco-willi/cas-dl-compvis-exercises-fs2026/blob/main/exercises/01_image_data/exercise.ipynb)
+
+### Exercise 02 - Image Classification
+
+Click on the following badge to open the notebook in Google Colab:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/marco-willi/cas-dl-compvis-exercises-fs2026/blob/main/exercises/02_classification/exercise.ipynb)
+
+### Exercise 03 - Image Retrieval
+
+Click on the following badge to open the notebook in Google Colab:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/marco-willi/cas-dl-compvis-exercises-fs2026/blob/main/exercises/03_retrieval/exercise.ipynb)
+
 ## Local
 
 ```
