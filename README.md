@@ -35,6 +35,18 @@ Click on the following badge to open the notebook in Google Colab:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/marco-willi/cas-dl-compvis-exercises-fs2026/blob/main/exercises/03_retrieval/exercise.ipynb)
 
+### Exercise 04 - Pre-Trained Model Adaptation
+
+Click on the following badge to open the notebook in Google Colab:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/marco-willi/cas-dl-compvis-exercises-fs2026/blob/main/exercises/04_adaptation/exercise.ipynb)
+
+### Exercise 05 - Vision Backbones
+
+Click on the following badge to open the notebook in Google Colab:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/marco-willi/cas-dl-compvis-exercises-fs2026/blob/main/exercises/05_backbones/exercise.ipynb)
+
 ## Local
 
 ```
