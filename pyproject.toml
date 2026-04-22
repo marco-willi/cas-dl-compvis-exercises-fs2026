@@ -136,10 +136,7 @@ ignore = [
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"notebooks/00_env_check/env_check.ipynb" = ["F401", "I", "E402"]
-"notebooks/**/*.ipynb" = ["F401", "E402", "W291", "B018"]
-"notebooks/template.ipynb" = ["F401", "E402"]
-"exercises/**/*.ipynb" = ["F401", "E402", "W291", "B018", "F821"]
+"**/*.ipynb" = ["F401", "I", "E402", "W291", "B018", "F821"]
 
 [tool.ruff.format]
 quote-style = "double"
@@ -148,13 +145,12 @@ skip-magic-trailing-comma = false
 line-ending = "auto"
 
 [tool.ruff.lint.isort]
-known-first-party = ["dl_cv_lectures"]
 force-single-line = false
 force-sort-within-sections = false
 split-on-trailing-comma = true
 
 [tool.mypy]
-python_version = "3.11"
+python_version = "3.12"
 warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = true

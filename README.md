@@ -55,6 +55,8 @@ Click on the following badge to open the notebook in Google Colab:
 
 ## Local
 
+Install the dependencies with pip:
+
 ```
-pip install .
+pip install -r requirements.txt
 ```
