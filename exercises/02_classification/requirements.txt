@@ -1,2 +1,4 @@
 timm
 torchinfo
+gdown
+huggingface_hub
