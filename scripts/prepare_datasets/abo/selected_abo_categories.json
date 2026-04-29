@@ -1,0 +1,70 @@
+{
+  "source": "Amazon Berkeley Objects (ABO)",
+  "source_url": "https://amazon-berkeley-objects.s3.amazonaws.com/archives/abo-listings.tar",
+  "license": "CC BY-NC 4.0",
+  "min_items_per_class": 100,
+  "total_items_parsed": 147536,
+  "furniture_items_matched": 7873,
+  "selected": [
+    {
+      "coarse_category": "chair",
+      "item_count": 3074,
+      "image_count": 18450,
+      "raw_product_types": {
+        "CHAIR": 2100,
+        "OTTOMAN": 403,
+        "STOOL_SEATING": 393,
+        "BENCH": 105,
+        "BEAN_BAG_CHAIR": 73
+      }
+    },
+    {
+      "coarse_category": "lamp",
+      "item_count": 1234,
+      "image_count": 7513,
+      "raw_product_types": {
+        "LIGHT_FIXTURE": 544,
+        "LAMP": 544,
+        "HOME_LIGHTING_AND_LAMPS": 146
+      }
+    },
+    {
+      "coarse_category": "sofa",
+      "item_count": 1199,
+      "image_count": 7802,
+      "raw_product_types": {
+        "SOFA": 1199
+      }
+    },
+    {
+      "coarse_category": "table",
+      "item_count": 1116,
+      "image_count": 7065,
+      "raw_product_types": {
+        "TABLE": 936,
+        "DESK": 180
+      }
+    },
+    {
+      "coarse_category": "bed",
+      "item_count": 638,
+      "image_count": 3989,
+      "raw_product_types": {
+        "HEADBOARD": 297,
+        "BED": 221,
+        "BED_FRAME": 103,
+        "MATTRESS": 17
+      }
+    },
+    {
+      "coarse_category": "storage",
+      "item_count": 612,
+      "image_count": 4168,
+      "raw_product_types": {
+        "SHELF": 287,
+        "CABINET": 229,
+        "DRESSER": 96
+      }
+    }
+  ]
+}

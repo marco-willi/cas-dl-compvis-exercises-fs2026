@@ -1,0 +1,43 @@
+{
+  "source": "Snapshot Kgalagadi S1 v1.0",
+  "url": "https://lilawildlife.blob.core.windows.net/lila-wildlife/snapshot-safari/KGA/SnapshotKgalagadi_S1_v1.0.json.zip",
+  "min_images_per_class": 30,
+  "selected": [
+    {
+      "name": "empty",
+      "category_id": 0,
+      "dedup_count": 2672,
+      "all_count": 7886
+    },
+    {
+      "name": "gemsbokoryx",
+      "category_id": 2,
+      "dedup_count": 497,
+      "all_count": 1363
+    },
+    {
+      "name": "birdother",
+      "category_id": 3,
+      "dedup_count": 108,
+      "all_count": 324
+    },
+    {
+      "name": "steenbok",
+      "category_id": 12,
+      "dedup_count": 58,
+      "all_count": 122
+    },
+    {
+      "name": "ostrich",
+      "category_id": 8,
+      "dedup_count": 46,
+      "all_count": 136
+    },
+    {
+      "name": "jackalblackbacked",
+      "category_id": 4,
+      "dedup_count": 39,
+      "all_count": 83
+    }
+  ]
+}

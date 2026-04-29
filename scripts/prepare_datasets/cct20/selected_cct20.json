@@ -1,0 +1,57 @@
+{
+  "source": "Caltech Camera Traps \u2014 CCT20 benchmark subset",
+  "full_meta_url": "https://storage.googleapis.com/public-datasets-lila/caltechcameratraps/labels/caltech_camera_traps.json.zip",
+  "cct20_meta_url": "https://storage.googleapis.com/public-datasets-lila/caltechcameratraps/eccv_18_annotations.tar.gz",
+  "min_images_per_class": 200,
+  "max_selected_classes": 8,
+  "selected": [
+    {
+      "name": "opossum",
+      "category_id": 1,
+      "cct20_count": 13422,
+      "full_count": 16634
+    },
+    {
+      "name": "raccoon",
+      "category_id": 3,
+      "cct20_count": 7632,
+      "full_count": 10981
+    },
+    {
+      "name": "rabbit",
+      "category_id": 10,
+      "cct20_count": 5430,
+      "full_count": 12374
+    },
+    {
+      "name": "coyote",
+      "category_id": 9,
+      "cct20_count": 5189,
+      "full_count": 16348
+    },
+    {
+      "name": "bobcat",
+      "category_id": 6,
+      "cct20_count": 4760,
+      "full_count": 7923
+    },
+    {
+      "name": "cat",
+      "category_id": 16,
+      "cct20_count": 4528,
+      "full_count": 5167
+    },
+    {
+      "name": "empty",
+      "category_id": 30,
+      "cct20_count": 3917,
+      "full_count": 125745
+    },
+    {
+      "name": "squirrel",
+      "category_id": 5,
+      "cct20_count": 3125,
+      "full_count": 4433
+    }
+  ]
+}
