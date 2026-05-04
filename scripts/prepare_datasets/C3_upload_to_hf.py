@@ -47,6 +47,18 @@ DATASETS = {
         "checksum": DATA_DIR / "abo_furniture.tar.gz.sha256",
         "card": Path(__file__).resolve().parent / "abo_furniture_card.md",
     },
+    "ser_sampled": {
+        "repo_id": "marco-willi/ser_sampled",
+        "archive": DATA_DIR / "ser_sampled.tar.gz",
+        "checksum": DATA_DIR / "ser_sampled.tar.gz.sha256",
+        "card": Path(__file__).resolve().parent / "ser_sampled_card.md",
+    },
+    "ser_sampled_cropped": {
+        "repo_id": "marco-willi/ser_sampled_cropped",
+        "archive": DATA_DIR / "ser_sampled_cropped.tar.gz",
+        "checksum": DATA_DIR / "ser_sampled_cropped.tar.gz.sha256",
+        "card": Path(__file__).resolve().parent / "ser_sampled_card.md",
+    },
 }
 
 
