@@ -105,3 +105,69 @@ def ensure_dataset(
     )
     print(f"Ready: {dataset_dir}")
     return dataset_dir
+
+
+# ---------------------------------------------------------------------------
+# Available datasets — inline snippets for exercise notebooks
+#
+# Notebooks are self-contained (no imports from this file). Copy the relevant
+# snippet into the notebook's setup cell, replacing the GDrive ID placeholder
+# with the value from scripts/dataset_registry.py once the archive is uploaded.
+#
+# Default camera-trap / retrieval datasets (GDrive + HF fallback):
+# ---------------------------------------------------------------------------
+#
+#   ser_balanced (default for 01, 02, 04, 04_lora, 05):
+#     dataset_dir = ensure_dataset(
+#         DATA_PATH, "ser_balanced.tar.gz", "ser_balanced",
+#         gdrive_id="1iRlZue4-Udg_lA9RCYtg3zhctqbbPhX7",
+#         hf_repo="marco-willi/ser_balanced",
+#     )
+#
+#   cct20 (alternative for 01, 02, 04, 04_lora, 05):
+#     dataset_dir = ensure_dataset(
+#         DATA_PATH, "cct20.tar.gz", "cct20",
+#         gdrive_id="105DkEQcFhgWsQEzKh6p-u2QMMuUc2yt2",
+#         hf_repo="marco-willi/camera-trap-cct20",
+#     )
+#
+#   kgalagadi (alternative for 01, 02, 04, 04_lora, 05 — heavy class imbalance):
+#     dataset_dir = ensure_dataset(
+#         DATA_PATH, "kgalagadi.tar.gz", "kgalagadi",
+#         gdrive_id="129vX_GF4vUgwRlyLpx5BNPf6lI2n89Wp",
+#     )
+#
+#   abo_furniture (default for 03_retrieval):
+#     dataset_dir = ensure_dataset(
+#         DATA_PATH, "abo_furniture.tar.gz", "abo",
+#         gdrive_id="1ClnTzR1plXXzKQslsK4YaQzzxCHU44cK",
+#         hf_repo="marco-willi/abo_furniture",
+#     )
+#
+# ---------------------------------------------------------------------------
+# Optional alternative datasets (GDrive only — no HF mirror due to licensing)
+# Suitable for exercises 01, 02, 04, 04_lora, 05. NOT for 03_retrieval.
+# ---------------------------------------------------------------------------
+#
+#   cats_vs_dogs (~25k images, 2 classes: Cat / Dog):
+#     dataset_dir = ensure_dataset(
+#         DATA_PATH, "cats_vs_dogs.tar.gz", "cats_vs_dogs",
+#         gdrive_id="<cats_vs_dogs-drive-id>",   # fill from dataset_registry.py
+#     )
+#     # Images are variable size — apply transforms.Resize(256) + CenterCrop(224)
+#
+#   concrete_cracks (~40k images, 2 classes: Negative / Positive, 227x227 px):
+#     dataset_dir = ensure_dataset(
+#         DATA_PATH, "concrete_cracks.tar.gz", "concrete_cracks",
+#         gdrive_id="<concrete_cracks-drive-id>",  # fill from dataset_registry.py
+#     )
+#     # Images are 227x227 — transforms.Resize(224) or CenterCrop(224) suffices
+#
+#   eurosat (~27k images, 10 land-use classes, 64x64 px satellite RGB):
+#     dataset_dir = ensure_dataset(
+#         DATA_PATH, "eurosat.tar.gz", "eurosat",
+#         gdrive_id="<eurosat-drive-id>",          # fill from dataset_registry.py
+#     )
+#     # IMPORTANT: images are 64x64 px — always apply transforms.Resize(224)
+#     #            (or Resize(256) + CenterCrop(224)) for ImageNet-pretrained models
+# ---------------------------------------------------------------------------

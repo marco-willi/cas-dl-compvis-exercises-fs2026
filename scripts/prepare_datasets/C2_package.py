@@ -10,6 +10,9 @@ Usage:
     python scripts/prepare_datasets/C2_package.py kgalagadi
     python scripts/prepare_datasets/C2_package.py cct20
     python scripts/prepare_datasets/C2_package.py abo_furniture
+    python scripts/prepare_datasets/C2_package.py cats_vs_dogs
+    python scripts/prepare_datasets/C2_package.py concrete_cracks
+    python scripts/prepare_datasets/C2_package.py eurosat
     python scripts/prepare_datasets/C2_package.py all
 """
 
@@ -166,6 +169,10 @@ DATASETS = {
     "kgalagadi": {"data_subdir": "kgalagadi", "arcname": "kgalagadi"},
     "cct20": {"data_subdir": "cct20", "arcname": "cct20"},
     "abo_furniture": {"data_subdir": "abo", "arcname": "abo"},
+    # Optional alternative datasets (GDrive-only, no HF mirror due to licensing)
+    "cats_vs_dogs": {"data_subdir": "cats_vs_dogs", "arcname": "cats_vs_dogs"},
+    "concrete_cracks": {"data_subdir": "concrete_cracks", "arcname": "concrete_cracks"},
+    "eurosat": {"data_subdir": "eurosat", "arcname": "eurosat"},
 }
 
 

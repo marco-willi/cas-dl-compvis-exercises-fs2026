@@ -78,3 +78,96 @@ atypical mitoses. Used in
 domain-shifted target task for parameter-efficient fine-tuning (LoRA).
 
 ![AMI-Br normal mitotic figure patch](ami_br_normal.png)
+
+______________________________________________________________________
+
+## Optional Alternative Datasets
+
+The three datasets below are available as **alternatives** for any non-retrieval
+exercise. They can replace the default camera-trap datasets in
+[01_image_data](../exercises/01_image_data),
+[02_classification](../exercises/02_classification),
+[04_adaptation](../exercises/04_adaptation),
+[04_adaptation_lora](../exercises/04_adaptation_lora), and
+[05_backbones](../exercises/05_backbones).
+
+They are **not suitable for [03_retrieval](../exercises/03_retrieval)**, which
+requires a multi-view item structure (like ABO/DeepFashion).
+
+All three are hosted on Google Drive only — no Hugging Face mirror due to
+licensing restrictions. Download them with `ensure_dataset(..., hf_repo=None)`.
+
+______________________________________________________________________
+
+## Microsoft Cats vs Dogs
+
+The full Microsoft/Kaggle Cats and Dogs dataset (~25,000 colour photos of cats
+and dogs). Two corrupt source images (`Cat/666.jpg`, `Dog/11702.jpg`) are
+removed during preparation. Classes are balanced (50/50). Images are
+variable-size JPEGs, typically 150-500 px on the longer side.
+
+- **Source:** Microsoft (<https://www.microsoft.com/en-us/download/details.aspx?id=54765>)
+- **License:** Microsoft Terms of Use (educational/non-commercial)
+- **Split:** stratified 70/15/15, seed 42
+- **Classes:** Cat, Dog (~12,500 each)
+- **Total:** ~25,000 images
+
+```python
+dataset_dir = ensure_dataset(
+    DATA_PATH, "cats_vs_dogs.tar.gz", "cats_vs_dogs",
+    gdrive_id=GDRIVE_IDS["cats_vs_dogs.tar.gz"],
+)
+```
+
+Apply `transforms.Resize(256)` + `CenterCrop(224)` — images are variable size.
+
+______________________________________________________________________
+
+## Concrete Cracks
+
+The Ozgenel et al. Concrete Crack Images dataset (~40,000 227x227 JPEG images
+of concrete surfaces), with binary labels for intact (Negative) vs. cracked
+(Positive) surfaces. Well suited for teaching binary classification and
+industrial defect detection.
+
+- **Source:** Mendeley Data, doi: 10.17632/5y9wdsg2zt.2
+- **License:** Creative Commons Attribution 4.0 (CC BY 4.0)
+- **Split:** stratified 70/15/15, seed 42
+- **Classes:** Negative (~20,000), Positive (~20,000)
+- **Total:** ~40,000 images, 227x227 px
+
+```python
+dataset_dir = ensure_dataset(
+    DATA_PATH, "concrete_cracks.tar.gz", "concrete_cracks",
+    gdrive_id=GDRIVE_IDS["concrete_cracks.tar.gz"],
+)
+```
+
+Images are 227x227 px — `transforms.Resize(224)` or `CenterCrop(224)` suffices.
+
+______________________________________________________________________
+
+## EuroSAT RGB
+
+The EuroSAT land-use classification dataset (RGB variant, ~27,000 images across
+10 classes from Sentinel-2 satellite imagery). Images are 64x64 px, making
+this an interesting case for discussing domain shift from ImageNet pretraining.
+
+- **Source:** Zenodo record 7711810 (<https://zenodo.org/records/7711810>)
+- **License:** MIT License
+- **Attribution:** Helber et al. (2019), IEEE JSTARS, doi: 10.1109/JSTARS.2019.2918242
+- **Split:** stratified 70/15/15, seed 42
+- **Classes (10):** AnnualCrop, Forest, HerbaceousVegetation, Highway, Industrial,
+  Pasture, PermanentCrop, Residential, River, SeaLake (~1,900-3,000 each)
+- **Total:** ~27,000 images, 64x64 px
+
+```python
+dataset_dir = ensure_dataset(
+    DATA_PATH, "eurosat.tar.gz", "eurosat",
+    gdrive_id=GDRIVE_IDS["eurosat.tar.gz"],
+)
+```
+
+**Important:** EuroSAT images are 64x64 px. Apply `transforms.Resize(224)` (or
+`Resize(256)` + `CenterCrop(224)`) so ImageNet-pretrained models receive the
+expected input size.
