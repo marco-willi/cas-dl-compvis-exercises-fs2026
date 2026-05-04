@@ -21,12 +21,12 @@ GDRIVE_IDS = {
     "deepfashion_classroom_v1_internal.zip": "1ImwlWDEpqK1q_KMGcjSSX557CRtSFWbN",
     "cct20.tar.gz": "105DkEQcFhgWsQEzKh6p-u2QMMuUc2yt2",
     "kgalagadi.tar.gz": "129vX_GF4vUgwRlyLpx5BNPf6lI2n89Wp",
-    "ser_sampled.tar.gz": "",  # TODO: fill after GDrive upload
-    "ser_sampled_cropped.tar.gz": "",  # TODO: fill after GDrive upload
-    # Optional alternative datasets — fill IDs after uploading to GDrive
-    "cats_vs_dogs.tar.gz": "",  # TODO: fill after GDrive upload
-    "concrete_cracks.tar.gz": "",  # TODO: fill after GDrive upload
-    "eurosat.tar.gz": "",  # TODO: fill after GDrive upload
+    "ser_sampled.tar.gz": "1SnlMXzVQVbOpsWMVmIdzQA_ZxCneO-O6",
+    "ser_sampled_cropped.tar.gz": "1sfByP9AY3XnNVFdt18LDkC31HnWqajRQ",
+    # Optional alternative datasets — GDrive only (no HF mirror due to licensing)
+    "cats_vs_dogs.tar.gz": "1lUh43v0DGzOil7AOHnY3HdbrYK6eATuP",
+    "concrete_cracks.tar.gz": "1IGMcB90KxJttstneYVZCpybR7Easz2JJ",
+    "eurosat.tar.gz": "1orWhUumfU_exNxWeJEd4LN_kpB4SQ11_",
 }
 
 HF_REPOS = {
