@@ -1,31 +1,35 @@
 # Datasets
 
-This document lists every dataset used by the exercises, with a short description
-of its origin, content, and the exercise(s) it appears in. Curation details and
-licensing for the course-curated subsets live in their dataset cards under
-[scripts/prepare_datasets/](../scripts/prepare_datasets/).
+This document lists different dataset which can be used in the exercises.
 
 ## MNIST
 
 The classic dataset of 28×28 grayscale handwritten digits (0–9), 60k train
-and 10k test images. Used in [exercises/00_pytorch](../exercises/00_pytorch)
-as a small, fast-loading dataset for first contact with PyTorch tensors,
+and 10k test images. Used in
+[00_pytorch](../exercises/00_pytorch) as a small, fast-loading dataset for first contact with PyTorch tensors,
 `Dataset`, and `DataLoader`. Loaded directly from `torchvision.datasets.MNIST`.
 
-![MNIST samples](mnist_samples.png)
+![MNIST samples](./images/mnist_samples.png)
 
 ## Snapshot Safari SER (Serengeti)
 
-A balanced subset of camera-trap images from Serengeti National Park
+Camera-trap images from Serengeti National Park
 (Snapshot Safari 2024 Expansion), curated to ten species classes plus an
-`empty` class (~1850 images total). Used as the
+`empty` class (~1850 images total).
+Used as the
 **default** camera-trap dataset in
 [01_image_data](../exercises/01_image_data),
 [02_classification](../exercises/02_classification),
 [04_adaptation](../exercises/04_adaptation), and
 [05_backbones](../exercises/05_backbones).
 
-![SER elephant — night IR camera-trap frame](ser_elephant.jpg)
+<img src="./images/snapshot_serengeti_elephant.jpg" alt="SER elephant — night IR camera-trap frame" width="512">
+
+There are different variants:
+
+- balanced classes
+- random sample (unbalanced)
+- random sample with crops
 
 ## Caltech Camera Traps (CCT20)
 
@@ -35,7 +39,7 @@ from LILA Science. Offered as an **alternative** camera-trap dataset in
 exercises 02, 04, and 05. When a
 North-American species mix is preferred.
 
-![CCT20 bobcat crossing a road at night](cct20_bobcat.jpg)
+<img src="./images/cct20_bobcat.jpg" alt="CCT20 bobcat crossing a road at night" width="1024">
 
 ## Snapshot Kgalagadi
 
@@ -45,7 +49,7 @@ jackalblackbacked. Heavily imbalanced — `empty` accounts for ~78% of the
 ~3400 images, which makes it the **alternative of choice for dealing with
 class imbalance** in exercises 02, 04, and 05.
 
-![Kgalagadi gemsbok at a Kalahari camera trap](kgalagadi_gemsbok.jpg)
+<img src="./images/kgalgadi_oryx.JPG" alt="Kgalagadi oryx at a Kalahari camera trap" width="512">
 
 ## Amazon Berkeley Objects (ABO) Furniture
 
@@ -56,7 +60,7 @@ views per item, ~25k centre-cropped 224×224 JPEGs. The multi-view structure
 Used as the **default** dataset in
 [03_retrieval](../exercises/03_retrieval).
 
-![ABO chair — e-commerce product photo](abo_chair.jpg)
+![ABO bed — e-commerce product photo](./images/abo_bed.jpg)
 
 ## DeepFashion (In-Shop Retrieval)
 
@@ -67,7 +71,7 @@ Offered as the **alternative** to ABO in
 [03_retrieval](../exercises/03_retrieval). **Internal use only — do not
 redistribute** (see the dataset card for license details).
 
-![DeepFashion dress — in-shop catalogue photo](deepfashion_dress.jpg)
+![DeepFashion pants — in-shop catalogue photo](./images/deepfashion_pants.jpg)
 
 ## AMI-Br (Atypical Mitotic Figures — Breast)
 
@@ -77,27 +81,7 @@ atypical mitoses. Used in
 [04_adaptation_lora](../exercises/04_adaptation_lora) as a small,
 domain-shifted target task for parameter-efficient fine-tuning (LoRA).
 
-![AMI-Br normal mitotic figure patch](ami_br_normal.png)
-
-______________________________________________________________________
-
-## Optional Alternative Datasets
-
-The three datasets below are available as **alternatives** for any non-retrieval
-exercise. They can replace the default camera-trap datasets in
-[01_image_data](../exercises/01_image_data),
-[02_classification](../exercises/02_classification),
-[04_adaptation](../exercises/04_adaptation),
-[04_adaptation_lora](../exercises/04_adaptation_lora), and
-[05_backbones](../exercises/05_backbones).
-
-They are **not suitable for [03_retrieval](../exercises/03_retrieval)**, which
-requires a multi-view item structure (like ABO/DeepFashion).
-
-All three are hosted on Google Drive only — no Hugging Face mirror due to
-licensing restrictions. Download them with `ensure_dataset(..., hf_repo=None)`.
-
-______________________________________________________________________
+![AMI-Br](./images/ami_br_normal.png)
 
 ## Microsoft Cats vs Dogs
 
@@ -121,7 +105,7 @@ dataset_dir = ensure_dataset(
 
 Apply `transforms.Resize(256)` + `CenterCrop(224)` — images are variable size.
 
-______________________________________________________________________
+<img src="./images/cat.jpg" alt="Cat" width="300"> <img src="./images/dog.jpg" alt="Dog" width="300">
 
 ## Concrete Cracks
 
@@ -145,7 +129,7 @@ dataset_dir = ensure_dataset(
 
 Images are 227x227 px — `transforms.Resize(224)` or `CenterCrop(224)` suffices.
 
-______________________________________________________________________
+![Concrete Cracks — cracked surface example](./images/crack_example.jpg)
 
 ## EuroSAT RGB
 
@@ -171,3 +155,5 @@ dataset_dir = ensure_dataset(
 **Important:** EuroSAT images are 64x64 px. Apply `transforms.Resize(224)` (or
 `Resize(256)` + `CenterCrop(224)`) so ImageNet-pretrained models receive the
 expected input size.
+
+<img src="./images/sat_crop.jpg" alt="EuroSAT — permanent crop" width="200"> <img src="./images/sat_forest.jpg" alt="EuroSAT — forest" width="200"> <img src="./images/sat_highway.jpg" alt="EuroSAT — highway" width="200">
