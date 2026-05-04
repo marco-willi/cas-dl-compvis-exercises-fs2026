@@ -35,5 +35,5 @@ HF_REPOS = {
     "ser_sampled_cropped.tar.gz": "marco-willi/ser_sampled_cropped",
     "abo_furniture.tar.gz": "marco-willi/abo_furniture",
     "cct20.tar.gz": "marco-willi/camera-trap-cct20",
-    "kgalgadi.tar.gz": "marco-willi/camera-trap-kgalagadi",
+    "kgalagadi.tar.gz": "marco-willi/camera-trap-kgalagadi",
 }
